@@ -14,6 +14,8 @@ const getUrl = pathname => url.format({
 describe('Feathers application tests', () => {
   let server;
 
+
+  
   before(function(done) {
     server = app.listen(port);
     server.once('listening', () => done());
