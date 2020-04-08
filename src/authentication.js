@@ -3,13 +3,13 @@ const { AuthenticationBaseStrategy } = require('@feathersjs/authentication');
 const { LocalStrategy } = require('@feathersjs/authentication-local');
 const { expressOauth } = require('@feathersjs/authentication-oauth');
 
-class AnonymousStrategy extends AuthenticationBaseStrategy {
-  async authenticate(authentication, params) {
-    return {
-      anonymous: true
-    }
-  }
-}
+// class AnonymousStrategy extends AuthenticationBaseStrategy {
+//   async authenticate(authentication, params) {
+//     return {
+//       anonymous: true
+//     }
+//   }
+// }
 
 module.exports = app => {
   const authentication = new AuthenticationService(app);

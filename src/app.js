@@ -52,7 +52,7 @@ app.configure(channels);
 app.use(express.notFound());
 app.use(express.errorHandler({ logger }));
 
-app.hooks(appHooks)
+app.hooks(appHooks);
 
 
 module.exports = app;

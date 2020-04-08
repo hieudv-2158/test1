@@ -22,7 +22,7 @@ module.exports = {
   },
 
   error: {
-    all: [function(ctx) {
+    all: [function() {
       // console.log('1', ctx.error)
     }],
     find: [],
