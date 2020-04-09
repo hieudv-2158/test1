@@ -1,13 +1,17 @@
-/* eslint-disable no-console */
-const logger = require('./logger');
-const app = require('./app');
-const port = app.get('port');
-const server = app.listen(port);
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-process.on('unhandledRejection', (reason, p) =>
-  logger.error('Unhandled Rejection at: Promise ', p, reason)
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
-server.on('listening', () =>
-  logger.info('Feathers application started on http://%s:%d', app.get('host'), port)
-);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
